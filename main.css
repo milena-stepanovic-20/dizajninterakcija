@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+html,
+body,
+header,
+h1,
+h2,
+main,
+a,
+img,
+div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  background: transparent;
+  font-family: "Raleway", serif;
+}
+
+#corgi {
+  display: none;
+}
+
+.screen {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.game {
+}
+
+.header {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#canvas {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(https://www.elementar.com/fileadmin/user_upload/Images/Blog/2024/Beer-A-legendary-history/Beer.jpg);
+  display: block;
+}
+
+.menjase {
+  width: 200px;
+  height: 500px;
+  margin-top: 45px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}

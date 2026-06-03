@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>cica</title>
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <script type="application/javascript" src="vendor/keymaster.js"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-2.1.1.js"
+    ></script>
+    <script type="application/javascript" src="lib/bundle.js"></script>
+  </head>
+  <body>
+    <div class="screen">
+      <div class="menjase" id="side-left"></div>
+      <div class="game">
+        <h1 class="header">PIVO SKIDANJE</h1>
+        <canvas id="canvas" width="400" height="500"></canvas>
+      </div>
+      <div class="menjase" id="side-right"></div>
+    </div>
+
+    <script>
+      var lastScore = -1;
+
+      function setSideImage(score) {
+        var idx = Math.min(Math.floor(score / 5), 5);
+        var url = "url(assets/slika" + (idx + 1) + ".JPG)";
+        document.getElementById("side-left").style.backgroundImage = url;
+        document.getElementById("side-right").style.backgroundImage = url;
+      }
+
+      setSideImage(0);
+
+      setInterval(function () {
+        var game = window.__activeGame;
+        if (!game) return;
+        if (game.score !== lastScore) {
+          lastScore = game.score;
+          setSideImage(game.score);
+        }
+      }, 100);
+    </script>
+  </body>
+</html>
